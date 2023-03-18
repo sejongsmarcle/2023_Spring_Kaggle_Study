@@ -37,21 +37,19 @@
 - 대상: 2학년 필참 및 나머지는 희망자에 한함
 - 경고: 과제 미제출시, 불성실하게 활동, 결석 누적
 
-| 이름 | 주제 | 참고사항 | 날짜 | 장소 |
+| 이름 | 주제 | 날짜 | 장소 | 참고사항 |
 | --- | --- | --- | --- | --- |
-| 0주차 | OT |  | 3/19 | MS Teams |
-| 1주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 |  | 3/22 | B106 |
-| 2주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 |  | 3/29 | B106 |
-| 3주차 | Titanic Data Science Solutions |  | 4/5 | B106 |
-| 4주차 | Titanic Data Science Solutions |  | 4/12 | B106 |
-| 중간고사 | x |  | 4/20 - 4/26 | x |
-| 5주차 | 추후결정 후 공지 |  | 5/3 | B106 |
-| 6주차 | 추후결정 후 공지 |  | 5/10 | B106 |
-| 7주차 | 추후결정 후 공지 |  | 5/17 | B106 |
-| 8주차 | 추후결정 후 공지 |  | 5/24 | B106 |
-| 9주차 | 추후결정 후 공지 |  | 5/31 | B106 |
-| 10주차 | 추후결정 후 공지 |  | 6/7 | B106 |
-| 기말고사 | x |  | 6/15 - 6/21 | x |
+| 0주차 | OT | 3/19 19시 | MS Teams |  |
+| 1주차 | DACON 영화 데이터를 활용한 데이터 분석 | 3/22 | B106 | https://youtu.be/_6s--yeOhr0 |
+| 2주차 | DACON 따릉이 데이터 분석 실습 | 3/29 | B106 | https://youtu.be/WreGAJxukpA |
+| 3주차 | DACON 버스 운행시간 데이터 분석 실습 | 4/5 | B106 | https://youtu.be/rSdKCfqNbvQ |
+| 중간고사 | x | 4/20 - 4/26 | x |  |
+| 4주차 | STUDY 뒷풀이(필참) | 5/3 | B106 |  |
+| 5주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 | 5/10 | B106 |  |
+| 6주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 | 5/17 | B106 |  |
+| 7주차 | Titanic Data Science Solutions | 5/24 | B106 |  |
+| 8주차 | Titanic Data Science Solutions | 5/31 | B106 |  |
+| 기말고사 | x | 6/15 - 6/21 | x |  |
 
 ## 스터디 규정
 
@@ -74,10 +72,11 @@
 
 ## 팀
 
-| 1팀 | 2팀 | 3팀 | 4팀 | 5팀 | 6팀 | 7팀 | 8팀 | 9팀 | 10팀 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
+|  | 1팀 | 2팀 | 3팀 | 4팀 | 5팀 | 6팀 | 7팀 | 8팀 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 팀1 | 길태호 | 박시현 | 정유정 | 윤수경 | 이계무 | 유지원 | 천승원 | 하승아 |
+| 팀2 | 고진영 | 권효정 | 김향임 | 김준수 | 최규민 | 전유진 | 강민서 | 황유림 |
+|  |  |  | 양지윤 |  |  |  |  |  |
 
 ## 참조
 
@@ -88,3 +87,7 @@
 - [데이터 전처리](https://www.kaggle.com/kwonyoung234/for-beginner)
 - [데이터 분석 개념](https://www.youtube.com/watch?v=PjhlUzp_cU0)
 - [혼자 공부하는 머신러닝+딥러닝](https://youtu.be/J6wehCO_c58)
+
+## 필수로 듣기(1강-4강, 5주차 전까지)
+
+- [Kaggle 설명 영상](https://youtube.com/playlist?list=PL9mhQYIlKEhfBKFj3HYWwk-jQlV8aNwgk)
