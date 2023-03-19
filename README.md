@@ -14,7 +14,7 @@
 - 한 데이터 셋을 가지고 2주 동안 진행
 - 스터디 전에 공부해보고 스터디 시간에 페어프로그래밍 방식을 사용하여 코드 완성
     
-    [페어 프로그래밍 가이드](https://erratic-infinity-699.notion.site/888ebbfa2a014a2da1605d65def15dba)
+    [https://ko.wikipedia.org/wiki/페어_프로그래밍](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%96%B4_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
     
 - 주어지는 데이터 셋을 가지고 **공부한 내용**을 Github에 업로드
     - 코드 흐름
@@ -45,10 +45,10 @@
 | 3주차 | DACON 버스 운행시간 데이터 분석 실습 | 4/5 | B106 | https://youtu.be/rSdKCfqNbvQ |
 | 중간고사 | x | 4/20 - 4/26 | x |  |
 | 4주차 | STUDY 뒷풀이(필참) | 5/3 | B106 |  |
-| 5주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 | 5/10 | B106 |  |
-| 6주차 | 🚀Spaceship Titanic -📊EDA + 27 different models📈 | 5/17 | B106 |  |
-| 7주차 | Titanic Data Science Solutions | 5/24 | B106 |  |
-| 8주차 | Titanic Data Science Solutions | 5/31 | B106 |  |
+| 5주차 |[🚀Spaceship Titanic -📊EDA + 27 different models📈](https://www.kaggle.com/code/odins0n/spaceship-titanic-eda-27-different-models) | 5/10 | B106 |  |
+| 6주차 | [🚀Spaceship Titanic -📊EDA + 27 different models📈](https://www.kaggle.com/code/odins0n/spaceship-titanic-eda-27-different-models) | 5/17 | B106 |  |
+| 7주차 | [Titanic Data Science Solutions](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions) | 5/24 | B106 |  |
+| 8주차 | [Titanic Data Science Solutions](https://www.kaggle.com/code/startupsci/titanic-data-science-solutions)| 5/31 | B106 |  |
 | 기말고사 | x | 6/15 - 6/21 | x |  |
 
 ## 스터디 규정
