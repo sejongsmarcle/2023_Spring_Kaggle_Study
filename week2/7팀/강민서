@@ -1,0 +1,118 @@
+# 2주차
+
+### 1. 함수 정리
+
+**탐색적 자료분석: Exploratory Data Analysis(EDA)**
+
+- head로 데이터 분석 (train, test, submission)
+- tail로 하면 뒤에서부터
+- shape로 하면 전체 행과 열의 개수(train, test의 열은 1개 차이/ test와 submission 행 수는 동일)
+- info → 결측값 확인 <결측값이 있으면 오류발생!→ 사전에 확인하고 채워주기>
+- describe → 숫자형 기술 통계
+- groupby → 시간별로 집단 mean(평균), (plot → 시각화)
+
+분석) 등하교, 출퇴근 시간에 대여량이 늘어남을 확인 가능
+
+- 직관적으로 customizing → matplotlib 패키지 사용 ‘o-’ 점과 실선 다 이용, grid: 실선, 색도 변경가능 + 제목, x축, y축 이름 설정 가능 + plt.savefig로 저장 가능
+- plt.plot() 스타일
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1926db94-95b4-4628-9d78-d0aa6958e77a/Untitled.png)
+    
+- 보조선 추가: axvline, 텍스트: text
+- 코드
+    
+    ```python
+    plt.plot(train.groupby('hour').mean()['count'], 'go-')
+    plt.grid()
+    
+    plt.title('count by hours', fontsize = 15)
+    plt.xlabel('hour', fontsize = 15)
+    plt.ylabel('count', fontsize = 15)
+    
+    plt.axvline(8, color = 'r')
+    plt.axvline(18, color = 'r')
+    
+    plt.text(8, 120, 'go work', fontsize = 10)
+    plt.text(8, 120, 'leave work', fontsize = 10)
+    
+    plt.savefig('picture.png')
+    ```
+    
+- corr → 상관계수 확인 (한눈에 : heatmap) , annot= True (상관계수 수치 표시)
+
+분석) count 와 상관계수 높은 것: 한시간전 온도, 한시간전 풍속, 시
+
+**데이터 전처리: Data Cleansing & Pre-Processing**
+
+- isna → 결측치 여부 확인 T/F
+
+분석) 결측값 세밀하게 채우기: 행 확인하기 → 시간대 확인 → 온도차이가 심함 (중앙값X) 
+
+- fillna → 행과 시간대에 맞는 온도찾아서 dictionary 형태로, inplace 해야 저장됨! → 확인도해주기 (채워넣으면 isna 안나옴)
+
+**변수 선택 및 모델 구축: Feature Engineering & Initial Modeling**
+
+분석) 변수 3가지로 선택 hour, hour_bef_temperature, hour_bef_windspeed
+
+X→MODEL→Y
+
+- 코드
+    
+    ```python
+    features = ['hour', 'hour_bef_temperature', 'hour_bef_windspeed']
+    X_train = train[features]
+    y_train = train['count']
+    X_test = test[features]
+    ```
+    
+- RandomForestRegressor 사용 (DecisionTreeRegressor) 두 가지의 옵션은 비슷함 (가장 처음에 n_estimators 가 질문을 묻고자 하는 개수, n_jops: cpu개수 -1은 cpu모두 활용, max_depth: 나무의 깊이 )→ 과대적합 방
+
+tip) 코드에 ctrl + shift → 설명
+
+튜닝: 다양한 옵션들로 가장 적합한 모델 찾기
+
+- 코드
+    
+    ```python
+    model100 = RandomForestRegressor(n_estimators = 100, random_state=0)
+    model100_5 = RandomForestRegressor(n_estimators = 100, max_depth = 5, random_state=0)
+    model200 = RandomForestRegressor(n_estimators = 200)
+    
+    #적합한지
+    model100.fit(X_train, y_train)
+    model100_5.fit(X_train, y_train)
+    model200.fit(X_train, y_train)
+    
+    #예측값
+    ypred1 = model100.predict(X_test)
+    ypred1 = model100_5.predict(X_test)
+    ypred1 = model200.predict(X_test)
+    ```
+    
+- 답안지에 저장
+    
+    ```python
+    submission['count']=ypred1 
+    submission.to_csv('model100.csv', index = False)
+    ```
+    
+
+오차는 적을수록 좋음!
+
+### 2. 개념 정리
+
+DicisionTree→RandomForest
+
+**상관계수** : 두 변수간의 관계를 수치로 표현한 것, 같이 일어나는 강도를 나타내는 수치 (-1~1의 수치, 0에 가까워질수록 변화가 같이 일어나는 정도가 완만해짐, 보통 절댓값 0.4 이상이면 상관성 O)
+
+**≠ 기울기**와는 다른 개념임! 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2630d9d5-9555-4768-9e2b-b79c35c3b3e9/Untitled.png)
+
+▲ 순서대로 상관계수, 기울기, 상관계수가 0인 것들
+
+**≠ 인과관계**와 다른 개념임!
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef9a2316-4749-4cce-8cd0-e4d681ba6a1c/Untitled.png)
+
+좋은 변수들을 골라내는 방법 → 상관계수가 높은 변수를 채택한다!
